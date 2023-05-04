@@ -4,7 +4,7 @@ import sys, re
 # Usage: python parse_ggsearch.py input > output
 
 # gg_in=(ggsearch_out_Homo_sapiens.GRCh38.txt ggsearch_out_Mus_musculus.GRCm39.txt ggsearch_out_Drosophila_melanogaster.BDGP6.32.txt ggsearch_out_Caenorhabditis_elegans.WBcel235.txt)
-# for i in ${gg_in[@]}; do python parse_ggsearch.py $i > $i.parsed.tsv; done
+# for i in ${gg_in[@]}; do python functional_annotation/01parse_ggsearch.py $i > $i.parsed.tsv; done
 
 def remove_p(query_id):
     query_id = query_id.split(".")
