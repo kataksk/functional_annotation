@@ -41,8 +41,7 @@ with open(list_in, "r") as f:
         # print(df_merge)
         df_out = df_out.join([df_merge], how = 'outer')
         # print(df_out)
-
-df_out = df_out[~df_out.index.duplicated(keep='first')]
+        df_out = df_out[~df_out.index.duplicated(keep='first')]
 
 print(df_out)
 df_out.to_csv("./merged_blastp_result.csv")
